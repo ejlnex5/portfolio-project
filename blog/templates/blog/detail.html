@@ -63,9 +63,7 @@
         <h1 class="text-center pt-3">Welcome to Jeff's Blog</h1>
         <br />
         <br />
-        <h2 clas="">Latest Posts</h2>
         <hr />
-        {% for blog in blogs.all %}
             <!-- title -->
             <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
             <!-- image -->
@@ -77,10 +75,9 @@
             <h7>{{ blog.pub_date_pretty }}</h7>
             <br />
             <!-- body -->
-            <p class='pt-3 pl-2' style='font-size:16px;'>{{ blog.summary | linebreaksbr }}</p>
+            <p class='pt-3 pl-2' style='font-size:16px;'>{{ blog.body | linebreaksbr }}</p>
             <hr class='pb-5' />
             <br />
-        {% endfor %}
     </div>
 </main>
 
